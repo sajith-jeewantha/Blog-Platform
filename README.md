@@ -24,10 +24,10 @@ A fully functional **Blog Post Application** built using **C# ASP.NET**, allowin
 
 ## 📸 ScreenShots
 
-<img alt="screenshot1" src="./screenshots/screenshot1.png" width="50%">&nbsp;
-<img alt="screenshot2" src="./screenshots/screenshot2.png" width="50%">&nbsp;
-<img alt="screenshot3" src="./screenshots/screenshot3.png" width="50%">&nbsp;
-<img alt="screenshot4" src="./screenshots/screenshot4.png" width="50%">&nbsp;
+<img alt="screenshot1" src="./screenshots/screenshot1.png" width="40%">&nbsp;
+<img alt="screenshot2" src="./screenshots/screenshot2.png" width="40%">&nbsp;
+<img alt="screenshot3" src="./screenshots/screenshot3.png" width="40%">&nbsp;
+<img alt="screenshot4" src="./screenshots/screenshot4.png" width="40%">&nbsp;
 
 
 

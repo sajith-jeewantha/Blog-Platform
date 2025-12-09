@@ -20,3 +20,65 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+
+.card-title {
+    color: #2a7b2e;
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+.navbar {
+    background-color: #198754 !important;
+}
+
+.btn-success {
+    background-color: #198754;
+    border-color: #198754;
+}
+
+
+.card-title {
+    font-weight: 600;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: 0.2s;
+}
+
+.text-truncate {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.display-4 {
+    font-weight: 700;
+}
+
+.display-3 {
+    font-weight: 700;
+}
+
+
+.card, .border {
+    border-radius: 10px;
+}
+
+p {
+    font-size: 1.1rem;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+textarea.form-control {
+    resize: vertical;
+}

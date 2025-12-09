@@ -1,0 +1,63 @@
+@model IEnumerable<blogging_platform.Models.Blog>
+
+@{
+    ViewData["Title"] = "Blog Home";
+}
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="text-success">Blog Posts</h1>
+        <a class="btn btn-success" asp-action="Create">Create New Blog</a>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="row mb-4">
+        <div class="col-md-6 mx-auto">
+            <form asp-action="SearchBlogs">
+                <div class="input-group">
+                    <input required name="SearchPhrase" type="text" id="searchText" class="form-control" placeholder="Search blogs...">
+                    <button type="submit" value="Search" id="searchButton" class="btn btn-success">Search</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="row" id="blogContainer">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 mb-4 blog-item" data-title="@item.title.ToLower()">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title text-success">@item.title</h5>
+                        <p class="card-text text-truncate" style="max-height: 4.5em; overflow:hidden;">
+                            @item.content
+                        </p>
+                        <div class="mt-auto">
+                            <a class="btn btn-success btn-sm" asp-action="Details" asp-route-id="@item.Id">Read More</a>
+                        </div>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-between">
+                        <a class="text-success" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <a class="text-danger" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script>// Simple client-side search
+        document.getElementById("searchButton").addEventListener("click", function () {
+            let searchText = document.getElementById("searchText").value.toLowerCase();
+            let blogItems = document.querySelectorAll(".blog-item");
+
+            blogItems.forEach(item => {
+                let title = item.getAttribute("data-title");
+                item.style.display = title.includes(searchText) ? "block" : "none";
+            });
+        });</script>
+}

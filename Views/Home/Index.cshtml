@@ -1,9 +1,41 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="container mt-5">
 
+    <!-- Welcome Section -->
+    <div class="text-center mt-5">
+        <h1 class="display-3 text-success mb-3">Welcome to Our Blogging Platform!</h1>
+        <p class="lead mb-4">
+            Share your thoughts, ideas, and stories with the world.
+            Join our community and start your blogging journey today!
+        </p>
+        <a class="btn btn-success btn-lg" asp-controller="Blogs" asp-action="Create">
+            Create Your First Blog
+        </a>
+    </div>
+
+    <!-- Features Section -->
+    <div class="row mt-5 text-center">
+        <div class="col-md-4 mb-4">
+            <div class="p-4 border rounded shadow-sm h-100">
+                <h4 class="text-success">Easy to Use</h4>
+                <p>Our platform is simple and intuitive, so you can start writing right away.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="p-4 border rounded shadow-sm h-100">
+                <h4 class="text-success">Share Your Ideas</h4>
+                <p>Reach readers across the globe and connect with a community of bloggers.</p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="p-4 border rounded shadow-sm h-100">
+                <h4 class="text-success">Grow Your Voice</h4>
+                <p>Publish blogs, get feedback, and build your personal brand online.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
